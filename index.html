@@ -1,302 +1,460 @@
-<DOCTYPE html>!
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Les Leaders — Plateforme Éducative</title>
+<title>Les Leaders</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #222;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f3ff;
+    color: #17204a;
+}
 
-        header {
-            background: linear-gradient(135deg, #087f5b, #0ca678);
-            color: white;
-            padding: 30px 18px;
-            text-align: center;
-        }
+/* HEADER */
 
-        header h1 {
-            margin: 0;
-            font-size: 26px;
-        }
+header {
+    background: linear-gradient(135deg, #111c68, #7025d8, #f3a900);
+    color: white;
+    padding: 35px 20px 45px;
+    text-align: center;
+    border-radius: 0 0 35px 35px;
+}
 
-        header p {
-            margin: 10px 0 0;
-            font-size: 15px;
-        }
+header h1 {
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
 
-        .hero {
-            background: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
+header p {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
 
-        .hero h2 {
-            font-size: 25px;
-            margin-bottom: 10px;
-        }
+/* ACCUEIL */
 
-        .hero p {
-            line-height: 1.6;
-            color: #555;
-        }
+.hero {
+    padding: 45px 20px 25px;
+    text-align: center;
+}
 
-        .bouton-principal {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 13px 22px;
-            background: #087f5b;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-        }
+.hero h2 {
+    font-size: 29px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
 
-        main {
-            padding: 20px;
-        }
+.hero h2 span {
+    color: #7025d8;
+}
 
-        .titre-section {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.hero p {
+    color: #68718e;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: auto;
+}
 
-        .cartes {
-            display: grid;
-            gap: 16px;
-        }
+/* CHOIX SERIE */
 
-        .carte {
-            background: white;
-            padding: 22px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
+.choice-box {
+    margin: 25px 20px;
+    padding: 30px 20px;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(40,20,100,0.12);
+    text-align: center;
+}
 
-        .icone {
-            font-size: 42px;
-        }
+.choice-box h2 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
 
-        .carte h3 {
-            margin: 10px 0;
-            font-size: 20px;
-        }
+.choice-box p {
+    color: #68718e;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
 
-        .carte p {
-            color: #666;
-            line-height: 1.5;
-        }
+.choice-button {
+    display: inline-block;
+    padding: 16px 30px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #7025d8, #4b3de8);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .bouton {
-            display: inline-block;
-            margin-top: 8px;
-            padding: 11px 20px;
-            background: #087f5b;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
+/* MENU SERIES */
 
-        .apropos {
-            margin-top: 25px;
-            background: #087f5b;
-            color: white;
-            padding: 25px 20px;
-            border-radius: 15px;
-            text-align: center;
-        }
+.series-menu {
+    display: none;
+    margin: 25px 20px;
+    padding: 28px 18px;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(40,20,100,0.12);
+}
 
-        .apropos p {
-            line-height: 1.6;
-        }
+.series-menu h2 {
+    text-align: center;
+    margin-bottom: 22px;
+}
 
-        footer {
-            margin-top: 30px;
-            padding: 25px 15px;
-            text-align: center;
-            background: #222;
-            color: white;
-        }
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
 
-        footer p {
-            margin: 7px 0;
-        }
-    </style>
+.serie {
+    text-decoration: none;
+    color: #17204a;
+    background: #f5f3ff;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 18px 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.serie strong {
+    display: block;
+    color: #7025d8;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+/* MENU PRINCIPAL */
+
+.menu-section {
+    margin: 30px 20px;
+}
+
+.menu-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.menu-card {
+    background: white;
+    padding: 25px 15px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #17204a;
+    box-shadow: 0 10px 30px rgba(40,20,100,0.10);
+}
+
+.menu-card .icon {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.menu-card h3 {
+    margin-bottom: 7px;
+}
+
+.menu-card p {
+    color: #68718e;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* COURS SPECIAUX */
+
+.special {
+    margin: 30px 20px;
+    padding: 30px 20px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #111c68, #7025d8);
+    color: white;
+    text-align: center;
+}
+
+.special h2 {
+    margin-bottom: 10px;
+}
+
+.special p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.whatsapp {
+    display: block;
+    margin: 10px auto;
+    max-width: 270px;
+    padding: 13px;
+    background: #168c4b;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+/* ORIENTATION */
+
+.orientation {
+    margin: 30px 20px;
+    padding: 28px 20px;
+    border-radius: 25px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(40,20,100,0.10);
+}
+
+.orientation h2 {
+    margin-bottom: 10px;
+}
+
+.orientation p {
+    color: #68718e;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #68718e;
+    font-size: 14px;
+}
+
+/* TELEPHONE */
+
+@media (max-width: 500px) {
+
+    header h1 {
+        font-size: 31px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>🇨🇮 LES LEADERS</h1>
-    <p>Plateforme Éducative de Côte d'Ivoire</p>
-    <p>Inspirer. Former. Transformer.</p>
+    <h1>LES LEADERS</h1>
+    <p>INSPIRER • FORMER • TRANSFORMER</p>
 </header>
 
 
+<!-- ACCUEIL -->
+
 <section class="hero">
 
-    <h2>Bienvenue sur Les Leaders 👋</h2>
+    <h2>
+        🎓 Bienvenue, <span>bachelier !</span>
+    </h2>
 
     <p>
-        Une plateforme éducative destinée à accompagner les élèves
-        dans leur préparation au BEPC et au BAC.
+        Ton BAC est obtenu. Une nouvelle étape commence.
+        Les Leaders t'accompagne pour préparer ton avenir.
     </p>
 
-    <a href="terminale.html" class="bouton-principal">
-        🎓 Commencer les cours
+</section>
+
+
+<!-- CHOIX DE LA SERIE -->
+
+<section class="choice-box">
+
+    <h2>🎯 Ton parcours commence ici</h2>
+
+    <p>
+        Choisis d'abord ta série pour accéder
+        à ton espace.
+    </p>
+
+    <a href="#series" class="choice-button" onclick="ouvrirSeries()">
+        CHOISIR MA SÉRIE
     </a>
 
 </section>
 
 
-<>
+<!-- SERIES -->
 
-    <div class="titre-section">
+<section class="series-menu" id="series">
 
-        <h2>📚 Nos espaces</h2>
+    <h2>🎓 Choisis ta série</h2>
 
-        <p>
-            Choisis ton niveau pour commencer.
-        </p>
+    <div class="series-grid">
+
+        <a href="serie-a.html" class="serie">
+            <strong>A</strong>
+            Série A
+        </a>
+
+        <a href="#" class="serie">
+            <strong>B</strong>
+            Série B
+        </a>
+
+        <a href="#" class="serie">
+            <strong>C</strong>
+            Série C
+        </a>
+
+        <a href="#" class="serie">
+            <strong>D</strong>
+            Série D
+        </a>
+
+        <a href="#" class="serie">
+            <strong>E</strong>
+            Série E
+        </a>
+
+        <a href="#" class="serie">
+            <strong>F</strong>
+            Série F
+        </a>
+
+        <a href="#" class="serie">
+            <strong>G</strong>
+            Série G
+        </a>
+
+        <a href="#" class="serie">
+            <strong>H</strong>
+            Série H
+        </a>
 
     </div>
 
-
-    <section class="cartes">
-
-        <div class="carte">
-
-            <div class="icone">📘</div>
-
-            <h3>Classe de 3e</h3>
-
-            <p>
-                Prépare ton BEPC avec des cours,
-                exercices et sujets.
-            </p>
-
-            <a href="3eme.html" class="bouton">
-                Entrer
-            </a>
-
-        </div>
+</section>
 
 
-        <div class="carte">
+<!-- CONCOURS ET BIBLIOTHEQUE -->
 
-            <div class="icone">🎓</div>
+<section class="menu-section">
 
-            <h3>Classe de Terminale</h3>
+    <h2 class="menu-title">
+        📚 Ressources
+    </h2>
+
+    <div class="menu-grid">
+
+        <a href="#" class="menu-card">
+
+            <div class="icon">🏆</div>
+
+            <h3>Concours</h3>
 
             <p>
-                Prépare ton BAC avec des cours,
-                exercices, corrections et quiz.
+                Découvre les concours et opportunités
+                accessibles aux bacheliers.
             </p>
 
-            <a href="terminale.html" class="bouton">
-                Entrer
-            </a>
-
-        </div>
+        </a>
 
 
-        <div class="carte">
+        <a href="#" class="menu-card">
 
-            <div class="icone">🧠</div>
+            <div class="icon">📖</div>
 
-            <h3>Quiz</h3>
+            <h3>Bibliothèque</h3>
 
             <p>
-                Teste tes connaissances et
-                améliore ton niveau.
+                Retrouve des ressources et documents
+                utiles pour tes études.
             </p>
 
-            <a href="#" class="bouton">
-                Commencer
-            </a>
+        </a>
 
-        </div>
+    </div>
 
-
-        <div class="carte">
-
-            <div class="icone">📝</div>
-
-            <h3>Sujets & Corrigés</h3>
-
-            <p>
-                Entraîne-toi avec des exercices
-                et anciens sujets.
-            </p>
-
-            <a href="#" class="bouton">
-                Voir
-            </a>
-
-        </div>
-
-    </section>
+</section>
 
 
-    <section class="apropos">
+<!-- COURS SPECIAUX -->
 
-        <h2>🚀 Notre mission</h2>
+<section class="special">
 
-        <p>
-            Aider chaque élève à apprendre, s'entraîner
-            et progresser grâce à des ressources éducatives
-            accessibles depuis son téléphone.
-        </p>
+    <h2>📲 COURS SPÉCIAUX</h2>
 
-        <p>
-            <strong>INSPIRER. FORMER. TRANSFORMER.</strong>
-        </p>
+    <p>
+        Pour bénéficier de nos cours spéciaux,
+        contacte-nous directement sur WhatsApp.
+    </p>
 
-    </section>
-
-</main>
-
-<section class="apropos">
-
-    <h2>📱 Contact WhatsApp</h2>
-
-    <p>Une question ? Besoin d'aide pour les cours ?</p>
-
-    <a href="https://wa.me/2250718169140" class="bouton">
-        💬 Contacter sur WhatsApp
+    <a class="whatsapp" href="https://wa.me/2250718169140">
+        WhatsApp : 0718169140
     </a>
 
-    <br><br>
-
-    <a href="https://wa.me/2250544534625" class="bouton">
-        💬 Contacter sur WhatsApp
+    <a class="whatsapp" href="https://wa.me/2250544534625">
+        WhatsApp : 0544534625
     </a>
 
 </section>
 
+
+<!-- ORIENTATION EN DERNIER -->
+
+<section class="orientation">
+
+    <h2>🧭 Orientation</h2>
+
+    <p>
+        Découvre les informations utiles pour
+        construire ton parcours après le BAC.
+    </p>
+
+</section>
+
+
 <footer>
 
-    <p>🇨🇮 LES LEADERS</p>
+    © 2026 Les Leaders
+    <br><br>
+    INSPIRER • FORMER • TRANSFORMER
 
-    <p>Plateforme Éducative de Côte d'Ivoire</p>
+</footer>
 
-    <p>Inspirer. Former. Transformer.</p>
 
-    <p>© 2026</p>
+<script>
 
-</>
+function ouvrirSeries() {
+
+    document.getElementById("series").style.display = "block";
+
+    document.getElementById("series").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+</script>
 
 </body>
 </html>
