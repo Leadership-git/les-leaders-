@@ -1,189 +1,302 @@
-<!DOCTYPE html>
+<DOCTYPE html>!
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Les Leaders - Plateforme Éducative</title>
+    <title>Les Leaders — Plateforme Éducative</title>
 
     <style>
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background: #f5f7fb;
+            background: #f5f7fa;
             color: #222;
         }
 
         header {
-            background: #1677ff;
+            background: linear-gradient(135deg, #087f5b, #0ca678);
             color: white;
-            padding: 25px 20px;
+            padding: 30px 18px;
             text-align: center;
         }
 
         header h1 {
-            font-size: 30px;
-            margin-bottom: 8px;
+            margin: 0;
+            font-size: 26px;
         }
 
         header p {
+            margin: 10px 0 0;
             font-size: 15px;
         }
 
-        nav {
-            background: white;
-            padding: 12px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #1677ff;
-            font-weight: bold;
-            padding: 8px 12px;
-        }
-
         .hero {
+            background: white;
+            padding: 30px 20px;
             text-align: center;
-            padding: 45px 20px;
         }
 
         .hero h2 {
-            font-size: 28px;
-            margin-bottom: 15px;
+            font-size: 25px;
+            margin-bottom: 10px;
         }
 
         .hero p {
-            max-width: 650px;
-            margin: auto;
             line-height: 1.6;
             color: #555;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
+        .bouton-principal {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 13px 22px;
+            background: #087f5b;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        main {
             padding: 20px;
         }
 
-        .section-title {
+        .titre-section {
             text-align: center;
-            margin: 30px 0 20px;
-            font-size: 24px;
+            margin-bottom: 20px;
         }
 
-        .cards {
+        .cartes {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
+            gap: 16px;
         }
 
-        .card {
+        .carte {
             background: white;
-            padding: 25px 20px;
-            border-radius: 12px;
+            padding: 22px;
+            border-radius: 15px;
             text-align: center;
             box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         }
 
-        .card h3 {
-            margin-bottom: 10px;
-            color: #1677ff;
+        .icone {
+            font-size: 42px;
         }
 
-        .card p {
+        .carte h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .carte p {
             color: #666;
             line-height: 1.5;
         }
 
-        .button {
+        .bouton {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 18px;
-            background: #1677ff;
+            margin-top: 8px;
+            padding: 11px 20px;
+            background: #087f5b;
             color: white;
             text-decoration: none;
             border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .apropos {
+            margin-top: 25px;
+            background: #087f5b;
+            color: white;
+            padding: 25px 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .apropos p {
+            line-height: 1.6;
         }
 
         footer {
-            margin-top: 40px;
-            background: #111827;
-            color: white;
-            text-align: center;
+            margin-top: 30px;
             padding: 25px 15px;
+            text-align: center;
+            background: #222;
+            color: white;
         }
 
         footer p {
-            margin: 6px;
+            margin: 7px 0;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- EN-TÊTE -->
-    <header>
-        <h1>Les Leaders</h1>
-        <p>Plateforme Éducative</p>
-    </header>
+<header>
+    <h1>🇨🇮 LES LEADERS</h1>
+    <p>Plateforme Éducative de Côte d'Ivoire</p>
+    <p>Inspirer. Former. Transformer.</p>
+</header>
 
-    <!-- MENU -->
-    <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#cours">Cours</a>
-        <a href="#exercices">Exercices</a>
-        <a href="#quiz">Quiz</a>
-        <a href="#orientation">Orientation</a>
-        <a href="#concours">Concours</a>
-    </nav>
 
-    <!-- ACCUEIL -->
-    <section class="hero" id="accueil">
-        <h2>Bienvenue sur Les Leaders</h2>
+<section class="hero">
+
+    <h2>Bienvenue sur Les Leaders 👋</h2>
+
+    <p>
+        Une plateforme éducative destinée à accompagner les élèves
+        dans leur préparation au BEPC et au BAC.
+    </p>
+
+    <a href="terminale.html" class="bouton-principal">
+        🎓 Commencer les cours
+    </a>
+
+</section>
+
+
+<>
+
+    <div class="titre-section">
+
+        <h2>📚 Nos espaces</h2>
 
         <p>
-            Une plateforme éducative destinée à accompagner les élèves
-            dans leur apprentissage, leur préparation aux examens,
-            leur orientation et leur réussite scolaire.
+            Choisis ton niveau pour commencer.
         </p>
+
+    </div>
+
+
+    <section class="cartes">
+
+        <div class="carte">
+
+            <div class="icone">📘</div>
+
+            <h3>Classe de 3e</h3>
+
+            <p>
+                Prépare ton BEPC avec des cours,
+                exercices et sujets.
+            </p>
+
+            <a href="3eme.html" class="bouton">
+                Entrer
+            </a>
+
+        </div>
+
+
+        <div class="carte">
+
+            <div class="icone">🎓</div>
+
+            <h3>Classe de Terminale</h3>
+
+            <p>
+                Prépare ton BAC avec des cours,
+                exercices, corrections et quiz.
+            </p>
+
+            <a href="terminale.html" class="bouton">
+                Entrer
+            </a>
+
+        </div>
+
+
+        <div class="carte">
+
+            <div class="icone">🧠</div>
+
+            <h3>Quiz</h3>
+
+            <p>
+                Teste tes connaissances et
+                améliore ton niveau.
+            </p>
+
+            <a href="#" class="bouton">
+                Commencer
+            </a>
+
+        </div>
+
+
+        <div class="carte">
+
+            <div class="icone">📝</div>
+
+            <h3>Sujets & Corrigés</h3>
+
+            <p>
+                Entraîne-toi avec des exercices
+                et anciens sujets.
+            </p>
+
+            <a href="#" class="bouton">
+                Voir
+            </a>
+
+        </div>
+
     </section>
 
-    <main class="container">
 
-        <!-- COURS -->
-        <h2 class="section-title" id="cours">
-            📚 Nos cours
-        </h2>
+    <section class="apropos">
 
-        <div class="cards">
+        <h2>🚀 Notre mission</h2>
 
-            <div class="card">
-                <h3>📐 Mathématiques</h3>
-                <p>
-                    Cours, leçons et ressources pour progresser
-                    en mathématiques.
-                </p>
-                <a href="#" class="button">Voir les cours</a>
-            </div>
+        <p>
+            Aider chaque élève à apprendre, s'entraîner
+            et progresser grâce à des ressources éducatives
+            accessibles depuis son téléphone.
+        </p>
 
-            <div class="card">
-                <h3>⚛️ Physique</h3>
-                <p>
-                    Cours et exercices de physique adaptés
-                    aux différents niveaux.
-                </p>
-                <a href="#" class="button">Voir les cours</a>
-            </div>
+        <p>
+            <strong>INSPIRER. FORMER. TRANSFORMER.</strong>
+        </p>
 
-            <div class="card">
-                <
+    </section>
+
+</main>
+
+<section class="apropos">
+
+    <h2>📱 Contact WhatsApp</h2>
+
+    <p>Une question ? Besoin d'aide pour les cours ?</p>
+
+    <a href="https://wa.me/2250718169140" class="bouton">
+        💬 Contacter sur WhatsApp
+    </a>
+
+    <br><br>
+
+    <a href="https://wa.me/2250544534625" class="bouton">
+        💬 Contacter sur WhatsApp
+    </a>
+
+</section>
+
+<footer>
+
+    <p>🇨🇮 LES LEADERS</p>
+
+    <p>Plateforme Éducative de Côte d'Ivoire</p>
+
+    <p>Inspirer. Former. Transformer.</p>
+
+    <p>© 2026</p>
+
+</>
+
+</body>
+</html>
