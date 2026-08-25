@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leçon 1 - Maths A1</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#ffffff;color:#000;line-height:1.9;font-size:18px}
+header{background:#ffffff;text-align:center;padding:25px 15px;border-bottom:5px solid #f3a900}
+header h1{color:#111c68;font-size:24px}
+header p{color:#000;font-size:17px;margin-top:5px}
+.container{padding:15px;max-width:700px;margin:auto}
+.card{background:#fff;border:2px solid #ddd;padding:20px;border-radius:12px;margin-bottom:20px}
+h2{color:#111c68;background:#fff8e1;padding:8px 12px;border-left:6px solid #f3a900;font-size:20px;margin-bottom:12px;border-radius:4px}
+h3{color:#000;font-size:18px;margin:18px 0 8px;text-decoration:underline}
+.def{border-left:5px solid #111c68;background:#eef2ff;padding:14px;border-radius:8px;margin:12px 0}
+.prop{border-left:5px solid #f3a900;background:#fff8e1;padding:14px;border-radius:8px;margin:12px 0}
+.formule{border:2px solid #111c68;background:#fff;padding:14px;border-radius:10px;margin:12px 0;font-weight:bold;text-align:center;font-size:19px}
+.exemple{border-left:5px solid #2e7d32;background:#f1f8e9;padding:14px;border-radius:8px;margin:12px 0}
+.btn{display:block;text-align:center;margin:25px auto;padding:14px 30px;background:#f3a900;color:#000;font-weight:bold;text-decoration:none;border-radius:30px;border:2px solid #000;width:250px}
+</style>
+</head>
+<body>
+
+<header>
+<h1>LEÇON 1 - TERMINALE A1</h1>
+<p>Généralités sur les fonctions : Limites - Continuité - Dérivation</p>
+<p><b>Cours officiel complet</b></p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>I. LIMITES</h2>
+
+<h3>Définition 1 : Limite en un point</h3>
+<div class="def">
+Soit f une fonction et a un réel.<br>
+On dit que lim f(x) = L quand x→a si f(x) devient très proche de L quand x devient très proche de a.
+</div>
+
+<h3>Définition 2 : Limite à l'infini</h3>
+<div class="def">
+lim f(x) = +∞ quand x→+∞ signifie que f(x) devient aussi grande qu'on veut quand x devient très grand.
+</div>
+
+<h3>Propriétés (Opérations)</h3>
+<div class="prop">
+Si lim f = l et lim g = l' alors :<br>
+- lim (f + g) = l + l'<br>
+- lim (f × g) = l × l'<br>
+- lim (f / g) = l / l' si l' ≠ 0<br><br>
+<b>4 formes indéterminées à retenir pour le BAC :</b><br>
+0/0 ; ∞/∞ ; ∞ - ∞ ; 0 × ∞ → Il faut factoriser.
+</div>
+
+<h3>Limites de référence BAC A1</h3>
+<div class="formule">
+lim 1/x = 0 (x→+∞)<br>
+lim ln x = -∞ (x→0+) et +∞ (x→+∞)<br>
+lim e^x = 0 (x→-∞) et +∞ (x→+∞)
+</div>
+</div>
+
+<div class="card">
+<h2>II. CONTINUITÉ ET ASYMPTOTE</h2>
+
+<h3>Définition : Continuité</h3>
+<div class="def">
+f est continue en a si :<br>
+1) f(a) existe<br>
+2) lim f(x) quand x→a existe<br>
+3) lim f(x) = f(a)
+</div>
+
+<h3>Définition : Asymptote verticale</h3>
+<div class="def">
+Si lim f(x) = +∞ ou -∞ quand x→a,<br>
+alors la droite x = a est asymptote verticale.
+</div>
+
+<div class="prop">
+<b>Propriété BAC :</b><br>
+- Toute fonction dérivable est continue.<br>
+- Les fonctions polynômes, ln, exp sont continues sur leur domaine.
+</div>
+</div>
+
+<div class="card">
+<h2>III. DÉRIVATION</h2>
+
+<h3>Définition 1 : Nombre dérivé</h3>
+<div class="def">
+f est dérivable en a si lim [f(x)-f(a)]/(x-a) existe. Cette limite est f'(a). C'est le coefficient directeur de la tangente.
+</div>
+
+<h3>Propriétés de dérivation</h3>
+<div class="prop">
+(u+v)' = u' + v'<br>
+(k.u)' = k.u'<br>
+(u×v)' = u'v + uv'<br>
+(1/u)' = -u' / u²<br>
+(u/v)' = (u'v - uv') / v²
+</div>
+
+<h3>Dérivées usuelles A1</h3>
+<div class="formule">
+(ln x)' = 1/x sur ]0;+∞[<br>
+(e^x)' = e^x<br>
+(ln u)' = u' / u si u>0<br>
+(e^u)' = u' × e^u
+</div>
+
+<h3>Propriété : Sens de variation</h3>
+<div class="prop">
+Si f'(x) > 0 sur I, alors f est croissante sur I.<br>
+Si f'(x) < 0 sur I, alors f est décroissante sur I.<br>
+Si f'(x) = 0, on a un maximum ou minimum.
+</div>
+</div>
+
+<div class="card">
+<h2>IV. EXEMPLE PRATIQUE COMPLET (BAC)</h2>
+<div class="exemple">
+<b>On donne f(x) = ln x + x - 2 sur ]0;+∞[</b><br><br>
+
+<b>1) Limites :</b><br>
+- En 0+ : lim ln x = -∞ donc lim f = -∞ → <b>x=0 est asymptote verticale</b><br>
+- En +∞ : lim ln x = +∞ et lim x = +∞ donc lim f = +∞<br><br>
+
+<b>2) Dérivée :</b><br>
+f'(x) = 1/x + 1 = (1+x)/x<br>
+Sur ]0;+∞[, x>0 donc f'(x) > 0<br><br>
+
+<b>3) Variation :</b><br>
+f'(x) > 0 donc <b>f est strictement croissante</b> sur ]0;+∞[<br><br>
+
+<b>4) Tableau :</b><br>
+x | 0 ............ +∞<br>
+f' | + + + + + + + +<br>
+f | -∞ ↗ +∞<br><br>
+
+<b>C'est toujours ça au BAC ! Limite → Dérivée → Tableau.</b>
+</div>
+</div>
+
+</div>
+
+<a href="maths-a1-lecon2.html" class="btn">Leçon suivante → ln</a>
+
+</body>
+</html>

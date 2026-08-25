@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leçon 4 - Suites</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#ffffff;color:#000;line-height:1.9;font-size:18px}
+header{background:#ffffff;text-align:center;padding:25px 15px;border-bottom:5px solid #f3a900}
+header h1{color:#111c68;font-size:24px}
+.container{padding:15px;max-width:700px;margin:auto}
+.card{background:#fff;border:2px solid #ddd;padding:20px;border-radius:12px;margin-bottom:20px}
+h2{color:#111c68;background:#fff8e1;padding:8px 12px;border-left:6px solid #f3a900;font-size:20px;margin-bottom:12px;border-radius:4px}
+.def{border-left:5px solid #111c68;background:#eef2ff;padding:14px;border-radius:8px;margin:12px 0}
+.prop{border-left:5px solid #f3a900;background:#fff8e1;padding:14px;border-radius:8px;margin:12px 0}
+.formule{border:2px solid #111c68;background:#fff;padding:14px;border-radius:10px;margin:12px 0;font-weight:bold;text-align:center;font-size:19px}
+.exemple{border-left:5px solid #2e7d32;background:#f1f8e9;padding:14px;border-radius:8px;margin:12px 0}
+.btn{display:block;text-align:center;margin:10px auto;padding:14px 30px;background:#f3a900;color:#000;font-weight:bold;text-decoration:none;border-radius:30px;border:2px solid #000;width:280px}
+</style>
+</head>
+<body>
+
+<header>
+<h1>LEÇON 4 - TERMINALE A1</h1>
+<p>Suites Numériques</p>
+<p><b>Arithmétique et Géométrique - 5 points au BAC</b></p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>I. DÉFINITION D'UNE SUITE NUMÉRIQUE</h2>
+
+<div class="def">
+Une <b>suite numérique</b> est une liste de nombres réels notés
+U₀, U₁, U₂, U₃, ...<br><br>
+
+Chaque nombre de la suite est appelé un <b>terme</b>.
+
+On note généralement la suite <b>(Uₙ)</b>.
+</div>
+
+<div class="exemple">
+<b>Exemple :</b><br>
+U₀ = 2, U₁ = 5, U₂ = 8, U₃ = 11, ...
+<br><br>
+Les nombres 2, 5, 8 et 11 sont les premiers termes de la suite.
+</div>
+
+<div class="def">
+Une suite peut être définie de deux façons principales :
+<br><br>
+
+<b>1. Par une relation de récurrence :</b><br>
+On connaît un premier terme et une relation permettant de calculer le terme suivant.
+<br><br>
+
+<b>2. Par une formule explicite :</b><br>
+On donne directement Uₙ en fonction de n.
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>II. SUITE ARITHMÉTIQUE</h2>
+
+<div class="def">
+Une suite <b>(Uₙ)</b> est arithmétique lorsqu'on obtient chaque terme
+en ajoutant toujours le même nombre <b>r</b> au terme précédent.
+
+<b>r</b> est appelé la <b>raison</b> de la suite.
+</div>
+
+<div class="formule">
+Uₙ₊₁ = Uₙ + r
+</div>
+
+<div class="prop">
+Pour trouver la raison :
+
+<br><br>
+
+<b>r = Uₙ₊₁ - Uₙ</b>
+
+<br><br>
+
+Si cette différence est constante, alors la suite est arithmétique.
+</div>
+
+<h3>Formule du terme général</h3>
+
+<div class="formule">
+Uₙ = U₀ + nr
+<br><br>
+ou
+<br><br>
+Uₙ = U₁ + (n - 1)r
+</div>
+
+<div class="exemple">
+<b>Exemple :</b><br><br>
+
+U₀ = 2 et r = 3
+
+<br><br>
+
+U₁ = 2 + 3 = 5<br>
+U₂ = 5 + 3 = 8<br>
+U₃ = 8 + 3 = 11
+
+<br><br>
+
+Donc :
+
+<b>Uₙ = 2 + 3n</b>
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>III. SOMME DES TERMES D'UNE SUITE ARITHMÉTIQUE</h2>
+
+<div class="formule">
+Somme = Nombre de termes ×
+(premier terme + dernier terme) ÷ 2
+</div>
+
+<div class="exemple">
+<b>Exemple :</b><br><br>
+
+Calculons :
+
+S = U₀ + U₁ + ... + U₁₀
+
+<br><br>
+
+Il y a <b>11 termes</b>.
+
+U₀ = 2 et U₁₀ = 32.
+
+<br><br>
+
+S = 11 × (2 + 32) ÷ 2
+
+<br><br>
+
+S = 11 × 17
+
+<br><br>
+
+<b>S = 187</b>
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>IV. SUITE GÉOMÉTRIQUE</h2>
+
+<div class="def">
+Une suite <b>(Uₙ)</b> est géométrique lorsqu'on obtient chaque terme
+en multipliant toujours le terme précédent par le même nombre <b>q</b>.
+
+<b>q</b> est appelé la <b>raison</b> de la suite.
+</div>
+
+<div class="formule">
+Uₙ₊₁ = Uₙ × q
+</div>
+
+<div class="prop">
+Pour trouver la raison, lorsque les termes précédents sont non nuls :
+
+<br><br>
+
+<b>q = Uₙ₊₁ ÷ Uₙ</b>
+
+<br><br>
+
+Si ce quotient est constant, la suite est géométrique.
+</div>
+
+<h3>Formule du terme général</h3>
+
+<div class="formule">
+Uₙ = U₀ × qⁿ
+<br><br>
+ou
+<br><br>
+Uₙ = U₁ × qⁿ⁻¹
+</div>
+
+<div class="exemple">
+<b>Exemple :</b><br><br>
+
+U₀ = 4 et q = 0,5
+
+<br><br>
+
+U₁ = 4 × 0,5 = 2<br>
+U₂ = 2 × 0,5 = 1<br>
+U₃ = 1 × 0,5 = 0,5
+
+<br><br>
+
+Donc :
+
+<b>Uₙ = 4 × (0,5)ⁿ</b>
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>V. SOMME DES TERMES D'UNE SUITE GÉOMÉTRIQUE</h2>
+
+<div class="formule">
+Si q ≠ 1 :
+
+S = U₀ × (1 - qⁿ⁺¹) ÷ (1 - q)
+</div>
+
+<div class="exemple">
+<b>Exemple :</b><br><br>
+
+Calculons :
+
+S = U₀ + U₁ + U₂ + U₃
+
+avec U₀ = 2 et q = 3.
+
+<br><br>
+
+Les termes sont :
+
+2 ; 6 ; 18 ; 54
+
+<br><br>
+
+Donc :
+
+S = 2 + 6 + 18 + 54
+
+<br><br>
+
+<b>S = 80</b>
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>VI. SENS DE VARIATION</h2>
+
+<div class="prop">
+<b>Pour une suite arithmétique :</b>
+
+<br><br>
+
+Si <b>r &gt; 0</b> → la suite est croissante.
+
+<br>
+
+Si <b>r &lt; 0</b> → la suite est décroissante.
+
+<br>
+
+Si <b>r = 0</b> → la suite est constante.
+
+<br><br>
+
+<b>Pour une suite géométrique à termes positifs :</b>
+
+<br><br>
+
+Si <b>q &gt; 1</b> → la suite est croissante.
+
+<br>
+
+Si <b>0 &lt; q &lt; 1</b> → la suite est décroissante.
+
+<br>
+
+Si <b>q = 1</b> → la suite est constante.
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>VII. LIMITES DES SUITES GÉOMÉTRIQUES</h2>
+
+<div class="prop">
+Lorsque <b>0 &lt; q &lt; 1</b>, les puissances qⁿ deviennent de plus en plus petites
+lorsque n augmente.
+
+<br><br>
+
+Ainsi :
+
+<b>qⁿ → 0</b> lorsque n → +∞.
+</div>
+
+<div class="exemple">
+<b>Exemple :</b><br><br>
+
+Uₙ = 4 × (0,5)ⁿ
+
+<br><br>
+
+Comme :
+
+0 &lt; 0,5 &lt; 1
+
+<br><br>
+
+on a :
+
+<b>Uₙ → 0</b> lorsque n → +∞.
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>VIII. RECONNAÎTRE UNE SUITE</h2>
+
+<div class="prop">
+
+<b>Pour reconnaître une suite arithmétique :</b>
+
+<br><br>
+
+On calcule :
+
+<b>Uₙ₊₁ - Uₙ</b>
+
+<br><br>
+
+Si le résultat est constant → <b>suite arithmétique</b>.
+
+<br><br>
+
+<b>Pour reconnaître une suite géométrique :</b>
+
+<br><br>
+
+On calcule :
+
+<b>Uₙ₊₁ ÷ Uₙ</b>
+
+<br><br>
+
+Si le résultat est constant → <b>suite géométrique</b>.
+
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>IX. PROBLÈME TYPE BAC</h2>
+
+<div class="exemple">
+Une entreprise produit <b>1000 unités</b> en 2020.
+
+Chaque année, sa production augmente de <b>50 unités</b>.
+
+<br><br>
+
+On note Uₙ la production n années après 2020.
+
+<br><br>
+
+On a :
+
+<b>U₀ = 1000</b>
+
+et
+
+<b>r = 50</b>.
+
+<br><br>
+
+La suite est donc <b>arithmétique</b>.
+
+<br><br>
+
+Son terme général est :
+
+<b>Uₙ = 1000 + 50n</b>
+
+<br><br>
+
+En 2026 :
+
+n = 6
+
+<br><br>
+
+U₆ = 1000 + 50 × 6
+
+<br><br>
+
+<b>U₆ = 1300 unités.</b>
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>🧠 À RETENIR POUR LE BAC</h2>
+
+<div class="prop">
+
+<b>Suite arithmétique :</b><br>
+Uₙ₊₁ = Uₙ + r
+
+<br><br>
+
+Uₙ = U₀ + nr
+
+<br><br>
+
+<b>Suite géométrique :</b><br>
+Uₙ₊₁ = Uₙ × q
+
+<br><br>
+
+Uₙ = U₀ × qⁿ
+
+<br><br>
+
+<b>Astuce :</b><br>
+Différence constante → <b>arithmétique</b>.<br>
+Quotient constant → <b>géométrique</b>.
+
+</div>
+
+</div>
+
+</div>
+
+<a href="maths-a1-lecon3.html" class="btn">← Leçon 3 exp</a>
+<a href="maths-a1-lecon5.html" class="btn">Leçon 5 → Dénombrement</a>
+<a href="maths-a1.html" class="btn">← Retour Programme</a>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leçon 2 - ln</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#ffffff;color:#000;line-height:1.9;font-size:18px}
+header{background:#ffffff;text-align:center;padding:25px 15px;border-bottom:5px solid #f3a900}
+header h1{color:#111c68;font-size:24px}
+.container{padding:15px;max-width:700px;margin:auto}
+.card{background:#fff;border:2px solid #ddd;padding:20px;border-radius:12px;margin-bottom:20px}
+h2{color:#111c68;background:#fff8e1;padding:8px 12px;border-left:6px solid #f3a900;font-size:20px;margin-bottom:12px;border-radius:4px}
+.def{border-left:5px solid #111c68;background:#eef2ff;padding:14px;border-radius:8px;margin:12px 0}
+.prop{border-left:5px solid #f3a900;background:#fff8e1;padding:14px;border-radius:8px;margin:12px 0}
+.formule{border:2px solid #111c68;background:#fff;padding:14px;border-radius:10px;margin:12px 0;font-weight:bold;text-align:center;font-size:19px}
+.exemple{border-left:5px solid #2e7d32;background:#f1f8e9;padding:14px;border-radius:8px;margin:12px 0}
+.alerte{border-left:5px solid #d32f2f;background:#ffebee;padding:14px;border-radius:8px;margin:12px 0}
+.btn{display:block;text-align:center;margin:20px auto;padding:14px 30px;background:#f3a900;color:#000;font-weight:bold;text-decoration:none;border-radius:30px;border:2px solid #000;width:250px}
+</style>
+</head>
+<body>
+<header>
+<h1>LEÇON 2 - TERMINALE A1</h1>
+<p>Fonction Logarithme Népérien ln</p>
+<p><b>Leçon la plus importante du BAC (8 points)</b></p>
+</header>
+<div class="container">
+
+<div class="card">
+<h2>I. DÉFINITION ET ENSEMBLE DE DÉFINITION</h2>
+<div class="def">
+<b>Définition :</b> La fonction ln est définie sur ]0 ; +∞[<br>
+On a : ln(1) = 0 et ln(e) = 1<br>
+e ≈ 2,718
+</div>
+<div class="alerte">
+<b>ATTENTION BAC :</b> ln(x) n'existe QUE si x > 0.<br>
+Toujours commencer par : Il faut x > 0 donc Df = ]0;+∞[
+</div>
+</div>
+
+<div class="card">
+<h2>II. PROPRIÉTÉS FONDAMENTALES (QCM)</h2>
+<div class="formule">
+1) ln(a × b) = ln a + ln b<br>
+2) ln(a / b) = ln a - ln b<br>
+3) ln(a^n) = n × ln a<br>
+4) ln(1/a) = -ln a<br>
+5) ln(e^x) = x et e^(ln x) = x
+</div>
+
+<div class="prop">
+<b>Exemples :</b><br>
+ln(e²) = 2×ln e = 2×1 = 2<br>
+ln(1) = ln(e^0) = 0<br>
+ln(1/e) = -ln e = -1<br>
+ln(√e) = ln(e^1/2) = 1/2
+</div>
+
+<div class="exemple">
+<b>QCM BAC 2025 :</b><br>
+Résoudre ln x ≤ 0<br>
+→ ln x ≤ ln 1<br>
+→ x ≤ 1 et x > 0<br>
+→ S = ]0 ; 1]
+</div>
+</div>
+
+<div class="card">
+<h2>III. DÉRIVÉE ET VARIATIONS</h2>
+<div class="def">
+<b>Définition dérivée :</b><br>
+(ln x)' = 1/x sur ]0;+∞[<br>
+(ln u)' = u' / u à condition que u > 0
+</div>
+
+<div class="prop">
+<b>Propriété variations :</b><br>
+La fonction ln est <b>strictement croissante</b> sur ]0;+∞[<br>
+Donc :<br>
+ln a < ln b ⇔ a < b<br>
+ln a = ln b ⇔ a = b (avec a>0, b>0)
+</div>
+
+<div class="exemple">
+<b>Exercice dérivée :</b><br>
+f(x) = ln(x²+1)<br>
+u = x²+1 → u' = 2x<br>
+f'(x) = u'/u = 2x / (x²+1)<br><br>
+
+f(x) = ln x + x<br>
+f'(x) = 1/x + 1 = (1+x)/x
+</div>
+</div>
+
+<div class="card">
+<h2>IV. ÉQUATIONS ET INÉQUATIONS (Exercice BAC 2010)</h2>
+<div class="exemple">
+<b>Méthode :</b><br>
+1) Chercher Df (x>0)<br>
+2) Mettre sous forme ln a = ln b<br>
+3) Enlever ln : a = b<br><br>
+
+<b>Exemple BAC tombé :</b><br>
+Résoudre 2(ln x)³ -7(ln x)² -5 ln x +4 =0<br><br>
+On pose X = ln x<br>
+On obtient 2X³-7X²-5X+4=0<br>
+On trouve X = -1 , X=1/2 , X=4<br><br>
+Donc :<br>
+ln x = -1 → x = e^-1 = 1/e<br>
+ln x = 1/2 → x = e^1/2 = √e<br>
+ln x = 4 → x = e^4<br><br>
+<b>S = {1/e ; √e ; e^4}</b>
+</div>
+</div>
+
+<div class="card">
+<h2>V. LIMITES DE ln</h2>
+<div class="formule">
+lim ln x = -∞ quand x→0+<br>
+lim ln x = +∞ quand x→+∞<br>
+lim (ln x)/x = 0 quand x→+∞<br>
+lim x×ln x = 0 quand x→0+
+</div>
+<div class="alerte">
+Si lim f(x) = -∞ en 0+ → x=0 est asymptote verticale
+</div>
+</div>
+
+</div>
+
+<a href="maths-a1-lecon1" class="btn">← Leçon 1</a>
+<a href="maths-a1-lecon3.html" class="btn">Leçon 3 → exp</a>
+
+</body>
+</html>

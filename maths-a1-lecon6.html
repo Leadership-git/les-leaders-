@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leçon 6 - Systèmes linéaires et programmation linéaire</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#fff;color:#000;line-height:1.9;font-size:18px}
+header{background:#fff;text-align:center;padding:25px 15px;border-bottom:5px solid #f3a900}
+header h1{color:#111c68;font-size:24px}
+.container{padding:15px;max-width:700px;margin:auto}
+.card{background:#fff;border:2px solid #ddd;padding:20px;border-radius:12px;margin-bottom:20px}
+h2{color:#111c68;background:#fff8e1;padding:8px 12px;border-left:6px solid #f3a900;font-size:20px;margin-bottom:12px;border-radius:4px}
+.def{border-left:5px solid #111c68;background:#eef2ff;padding:14px;border-radius:8px;margin:12px 0}
+.prop{border-left:5px solid #f3a900;background:#fff8e1;padding:14px;border-radius:8px;margin:12px 0}
+.formule{border:2px solid #111c68;background:#fff;padding:14px;border-radius:10px;margin:12px 0;font-weight:bold;text-align:center;font-size:19px}
+.exemple{border-left:5px solid #2e7d32;background:#f1f8e9;padding:14px;border-radius:8px;margin:12px 0}
+.btn{display:block;text-align:center;margin:10px auto;padding:14px 30px;background:#f3a900;color:#000;font-weight:bold;text-decoration:none;border-radius:30px;border:2px solid #000;width:280px}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>LEÇON 6 - TERMINALE A1</h1>
+<p>Systèmes linéaires et programmation linéaire</p>
+<p><b>Mathématiques — Niveau BAC A1</b></p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>I. SYSTÈME LINÉAIRE</h2>
+
+<div class="def">
+Un <b>système linéaire</b> est un ensemble de plusieurs équations
+dans lesquelles les inconnues sont au premier degré.
+<br><br>
+
+Dans cette leçon, on étudie notamment les systèmes de deux équations
+à deux inconnues.
+</div>
+
+<div class="formule">
+ax + by = c
+<br>
+a'x + b'y = c'
+</div>
+
+<div class="exemple">
+<b>Exemple :</b><br><br>
+
+Résoudre le système :
+
+<br><br>
+
+2x + y = 7
+<br>
+x - y = 2
+
+<br><br>
+
+On additionne les deux équations :
+
+<br><br>
+
+3x = 9
+
+<br><br>
+
+Donc :
+
+<b>x = 3</b>
+
+<br><br>
+
+Puis :
+
+x - y = 2
+
+<br><br>
+
+3 - y = 2
+
+<br><br>
+
+<b>y = 1</b>
+
+<br><br>
+
+La solution est donc :
+
+<b>(x ; y) = (3 ; 1)</b>
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>II. MÉTHODE PAR SUBSTITUTION</h2>
+
+<div class="def">
+La méthode par <b>substitution</b> consiste à exprimer une inconnue
+en fonction de l'autre, puis à remplacer cette expression dans
+la deuxième équation.
+</div>
+
+<div class="exemple">
+<b>Exemple :</b><br><br>
+
+x + y = 5
+<br>
+2x - y = 4
+
+<br><br>
+
+De la première équation :
+
+<b>y = 5 - x</b>
+
+<br><br>
+
+On remplace y dans la deuxième :
+
+<br><br>
+
+2x - (5 - x) = 4
+
+<br><br>
+
+2x - 5 + x = 4
+
+<br><br>
+
+3x = 9
+
+<br><br>
+
+<b>x = 3</b>
+
+<br><br>
+
+Donc :
+
+y = 5 - 3
+
+<br><br>
+
+<b>y = 2</b>
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>III. MÉTHODE PAR COMBINAISON</h2>
+
+<div class="def">
+La méthode par <b>combinaison</b> consiste à multiplier éventuellement
+les équations puis à les additionner ou les soustraire afin
+d'éliminer une inconnue.
+</div>
+
+<div class="exemple">
+<b>Exemple :</b><br><br>
+
+2x + y = 7
+<br>
+x - y = 2
+
+<br><br>
+
+En additionnant les deux équations :
+
+<br><br>
+
+3x = 9
+
+<br><br>
+
+Donc :
+
+<b>x = 3</b>
+
+<br><br>
+
+Puis :
+
+<b>y = 1</b>
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>IV. INTERPRÉTATION GRAPHIQUE</h2>
+
+<div class="def">
+Une équation du premier degré à deux inconnues peut être représentée
+par une <b>droite</b> dans un repère.
+<br><br>
+
+Résoudre un système revient à rechercher les coordonnées du
+<b>point d'intersection</b> des deux droites.
+</div>
+
+<div class="prop">
+Si les deux droites se coupent en un point, le système possède
+<b>une solution unique</b>.
+<br><br>
+
+Si les deux droites sont parallèles et distinctes, le système
+n'a <b>aucune solution</b>.
+<br><br>
+
+Si les deux droites sont confondues, le système possède
+<b>une infinité de solutions</b>.
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>V. INÉGALITÉS LINÉAIRES</h2>
+
+<div class="def">
+Une inégalité linéaire est une inégalité dans laquelle les inconnues
+sont au premier degré.
+</div>
+
+<div class="formule">
+ax + by ≤ c
+<br><br>
+ax + by ≥ c
+</div>
+
+<div class="exemple">
+<b>Exemple :</b><br><br>
+
+On considère :
+
+x + y ≤ 6
+
+<br><br>
+
+Cette inégalité représente un demi-plan délimité par la droite :
+
+<b>x + y = 6</b>
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>VI. SYSTÈME D'INÉGALITÉS</h2>
+
+<div class="def">
+Un système d'inégalités est constitué de plusieurs inégalités
+qui doivent être vérifiées simultanément.
+</div>
+
+<div class="exemple">
+<b>Exemple :</b><br><br>
+
+x ≥ 0
+<br>
+y ≥ 0
+<br>
+x + y ≤ 6
+
+<br><br>
+
+La solution correspond à la région du plan qui vérifie
+simultanément les trois conditions.
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>VII. PROGRAMMATION LINÉAIRE</h2>
+
+<div class="def">
+La <b>programmation linéaire</b> consiste à rechercher le maximum
+ou le minimum d'une expression linéaire sous certaines contraintes.
+</div>
+
+<div class="formule">
+F(x,y) = ax + by
+</div>
+
+<div class="prop">
+Dans un problème de programmation linéaire, on doit généralement :
+
+<br><br>
+
+1. Définir les inconnues.
+<br>
+2. Traduire les contraintes par des inégalités.
+<br>
+3. Représenter graphiquement la région admissible.
+<br>
+4. Déterminer les sommets de cette région.
+<br>
+5. Calculer la valeur de la fonction objectif aux sommets.
+<br>
+6. Choisir la valeur maximale ou minimale demandée.
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>VIII. PROBLÈME TYPE BAC</h2>
+
+<div class="exemple">
+Une entreprise fabrique deux produits A et B.
+
+<br><br>
+
+On note :
+
+<b>x</b> = nombre de produits A
+
+<br>
+
+<b>y</b> = nombre de produits B
+
+<br><br>
+
+Les contraintes sont :
+
+<br><br>
+
+x ≥ 0
+<br>
+y ≥ 0
+<br>
+x + y ≤ 10
+
+<br><br>
+
+Le bénéfice est donné par :
+
+<br><br>
+
+<b>F(x,y) = 300x + 200y</b>
+
+<br><br>
+
+Il faut rechercher les valeurs de x et y qui permettent
+d'obtenir le bénéfice maximal dans la région autorisée.
+</div>
+
+</div>
+
+
+<div class="card">
+<h2>IX. À RETENIR POUR LE BAC</h2>
+
+<div class="prop">
+
+<b>Système :</b> plusieurs équations à résoudre simultanément.
+
+<br><br>
+
+<b>Substitution :</b> exprimer une inconnue puis remplacer.
+
+<br><br>
+
+<b>Combinaison :</b> éliminer une inconnue par addition ou soustraction.
+
+<br><br>
+
+<b>Programmation linéaire :</b> optimiser une fonction sous contraintes.
+
+<br><br>
+
+<b>Fonction objectif :</b> expression que l'on cherche à maximiser
+ou à minimiser.
+
+</div>
+
+</div>
+
+</div>
+
+<a href="maths-a1-lecon5.html" class="btn">← Leçon 5 Probabilités</a>
+<a href="maths-a1-lecon7.html" class="btn">Leçon 7 → Primitives</a>
+<a href="maths-a1.html" class="btn">← Retour Programme</a>
+
+</body>
+</html>

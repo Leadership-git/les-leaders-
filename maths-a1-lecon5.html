@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Leçon 5 - Statistique à 2 variables</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#fff;
+    color:#000;
+    line-height:1.9;
+    font-size:18px
+}
+
+header{
+    background:#fff;
+    text-align:center;
+    padding:25px 15px;
+    border-bottom:5px solid #f3a900
+}
+
+header h1{
+    color:#111c68;
+    font-size:24px
+}
+
+.container{
+    padding:15px;
+    max-width:700px;
+    margin:auto
+}
+
+.card{
+    background:#fff;
+    border:2px solid #ddd;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px
+}
+
+h2{
+    color:#111c68;
+    background:#fff8e1;
+    padding:8px 12px;
+    border-left:6px solid #f3a900;
+    font-size:20px;
+    margin-bottom:12px;
+    border-radius:4px
+}
+
+.def{
+    border-left:5px solid #111c68;
+    background:#eef2ff;
+    padding:14px;
+    border-radius:8px;
+    margin:12px 0
+}
+
+.prop{
+    border-left:5px solid #f3a900;
+    background:#fff8e1;
+    padding:14px;
+    border-radius:8px;
+    margin:12px 0
+}
+
+.formule{
+    border:2px solid #111c68;
+    background:#fff;
+    padding:14px;
+    border-radius:10px;
+    margin:12px 0;
+    font-weight:bold;
+    text-align:center;
+    font-size:19px
+}
+
+.exemple{
+    border-left:5px solid #2e7d32;
+    background:#f1f8e9;
+    padding:14px;
+    border-radius:8px;
+    margin:12px 0
+}
+
+.btn{
+    display:block;
+    text-align:center;
+    margin:10px auto;
+    padding:14px 30px;
+    background:#f3a900;
+    color:#000;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:30px;
+    border:2px solid #000;
+    width:280px
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>LEÇON 5 - TERMINALE A1</h1>
+<p>Statistique à 2 variables</p>
+<p><b>Nuage de points • Droite de Mayer • Corrélation</b></p>
+</header>
+
+
+<div class="container">
+
+
+<div class="card">
+
+<h2>I. SÉRIE STATISTIQUE À 2 VARIABLES</h2>
+
+<div class="def">
+
+Une <b>série statistique à deux variables</b> associe à chaque
+individu deux valeurs notées généralement <b>x</b> et <b>y</b>.
+
+<br><br>
+
+On représente les données sous la forme de couples :
+
+<br><br>
+
+<b>(x₁ ; y₁), (x₂ ; y₂), ..., (xₙ ; yₙ)</b>
+
+</div>
+
+<div class="exemple">
+
+<b>Exemple :</b>
+
+<br><br>
+
+On étudie l'évolution du nombre d'élèves inscrits dans une
+formation.
+
+<br><br>
+
+x représente l'année et y le nombre d'élèves.
+
+<br><br>
+
+On peut obtenir les couples :
+
+<br><br>
+
+(2021 ; 120), (2022 ; 135), (2023 ; 150)
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>II. NUAGE DE POINTS</h2>
+
+<div class="def">
+
+Dans un repère, chaque couple <b>(xᵢ ; yᵢ)</b> est représenté
+par un point de coordonnées <b>(xᵢ ; yᵢ)</b>.
+
+<br><br>
+
+L'ensemble de ces points constitue le <b>nuage de points</b>
+associé à la série statistique.
+
+</div>
+
+<div class="prop">
+
+Le nuage de points permet d'observer graphiquement
+une éventuelle relation entre les deux variables.
+
+<br><br>
+
+Si les points semblent suivre une direction générale,
+on peut rechercher un <b>ajustement affine</b>.
+
+</div>
+
+<div class="exemple">
+
+<b>À retenir :</b>
+
+<br><br>
+
+Un nuage de points peut être :
+
+<br><br>
+
+• approximativement croissant ;
+
+<br>
+
+• approximativement décroissant ;
+
+<br>
+
+• ou sans tendance particulière.
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>III. POINT MOYEN</h2>
+
+<div class="def">
+
+Le <b>point moyen</b> du nuage de points est le point
+dont les coordonnées sont les moyennes des coordonnées
+des points du nuage.
+
+<br><br>
+
+On le note généralement <b>G</b>.
+
+</div>
+
+<div class="formule">
+
+G( x̄ ; ȳ )
+
+<br><br>
+
+x̄ = (x₁ + x₂ + ... + xₙ) / n
+
+<br><br>
+
+ȳ = (y₁ + y₂ + ... + yₙ) / n
+
+</div>
+
+<div class="exemple">
+
+<b>Exemple :</b>
+
+<br><br>
+
+On considère les valeurs :
+
+<br><br>
+
+x : 1 ; 2 ; 3 ; 4
+
+<br>
+
+y : 2 ; 4 ; 5 ; 9
+
+<br><br>
+
+Alors :
+
+<br><br>
+
+x̄ = (1+2+3+4)/4 = 2,5
+
+<br><br>
+
+ȳ = (2+4+5+9)/4 = 5
+
+<br><br>
+
+Donc le point moyen est :
+
+<b>G(2,5 ; 5)</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>IV. DROITE DE MAYER</h2>
+
+<div class="def">
+
+La <b>droite de Mayer</b> est une droite d'ajustement obtenue
+à partir du nuage de points.
+
+<br><br>
+
+Elle permet de représenter approximativement la tendance
+du nuage.
+
+</div>
+
+<div class="prop">
+
+Pour déterminer la droite de Mayer :
+
+<br><br>
+
+<b>1.</b> On partage la série statistique en deux groupes
+de même effectif lorsque cela est possible.
+
+<br><br>
+
+<b>2.</b> On calcule le point moyen de chaque groupe.
+
+<br><br>
+
+<b>3.</b> On détermine l'équation de la droite passant
+par les deux points moyens.
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>V. ÉQUATION D'UNE DROITE</h2>
+
+<div class="def">
+
+Une droite non verticale peut s'écrire sous la forme :
+
+</div>
+
+<div class="formule">
+
+y = ax + b
+
+</div>
+
+<div class="prop">
+
+<b>a</b> est le coefficient directeur.
+
+<br><br>
+
+<b>b</b> est l'ordonnée à l'origine.
+
+<br><br>
+
+Si on connaît deux points A(x₁ ; y₁) et B(x₂ ; y₂),
+avec x₁ ≠ x₂ :
+
+</div>
+
+<div class="formule">
+
+a = (y₂ - y₁) / (x₂ - x₁)
+
+<br><br>
+
+b = y₁ - ax₁
+
+</div>
+
+<div class="exemple">
+
+<b>Exemple :</b>
+
+<br><br>
+
+A(1 ; 3) et B(3 ; 7)
+
+<br><br>
+
+a = (7-3)/(3-1)
+
+<br><br>
+
+<b>a = 2</b>
+
+<br><br>
+
+Donc :
+
+y = 2x + b
+
+<br><br>
+
+Avec A :
+
+3 = 2×1 + b
+
+<br><br>
+
+<b>b = 1</b>
+
+<br><br>
+
+L'équation est donc :
+
+<b>y = 2x + 1</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>VI. AJUSTEMENT AFFINE</h2>
+
+<div class="def">
+
+Un <b>ajustement affine</b> consiste à rechercher une droite
+qui représente au mieux la tendance générale du nuage de points.
+
+<br><br>
+
+Son équation est de la forme :
+
+</div>
+
+<div class="formule">
+
+y = ax + b
+
+</div>
+
+<div class="prop">
+
+Si <b>a > 0</b>, la tendance est globalement croissante.
+
+<br><br>
+
+Si <b>a < 0</b>, la tendance est globalement décroissante.
+
+<br><br>
+
+Si <b>a</b> est proche de 0, la relation linéaire est faible.
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>VII. CORRÉLATION LINÉAIRE</h2>
+
+<div class="def">
+
+La <b>corrélation linéaire</b> permet de mesurer l'intensité
+de la relation linéaire entre deux variables statistiques.
+
+<br><br>
+
+Elle est étudiée à l'aide du <b>coefficient de corrélation linéaire</b>,
+noté généralement <b>r</b>.
+
+</div>
+
+<div class="formule">
+
+-1 ≤ r ≤ 1
+
+</div>
+
+<div class="prop">
+
+Lorsque <b>r</b> est proche de <b>1</b>, la corrélation linéaire
+positive est forte.
+
+<br><br>
+
+Lorsque <b>r</b> est proche de <b>-1</b>, la corrélation linéaire
+négative est forte.
+
+<br><br>
+
+Lorsque <b>r</b> est proche de <b>0</b>, la corrélation linéaire
+est faible ou inexistante.
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>VIII. INTERPRÉTATION DU COEFFICIENT</h2>
+
+<div class="exemple">
+
+<b>Exemple 1 :</b>
+
+<br><br>
+
+r = 0,95
+
+<br><br>
+
+Le coefficient est proche de 1.
+
+<br><br>
+
+On peut donc considérer qu'il existe une
+<b>forte corrélation linéaire positive</b>.
+
+<br><br>
+
+Les deux variables ont tendance à évoluer dans le même sens.
+
+</div>
+
+
+<div class="exemple">
+
+<b>Exemple 2 :</b>
+
+<br><br>
+
+r = -0,92
+
+<br><br>
+
+Le coefficient est proche de -1.
+
+<br><br>
+
+Il existe une <b>forte corrélation linéaire négative</b>.
+
+<br><br>
+
+Lorsque l'une des variables augmente,
+l'autre a tendance à diminuer.
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>IX. ESTIMATION À L'AIDE D'UNE DROITE</h2>
+
+<div class="def">
+
+Une fois l'équation d'une droite d'ajustement obtenue,
+elle peut être utilisée pour effectuer des estimations.
+
+</div>
+
+<div class="exemple">
+
+<b>Exemple :</b>
+
+<br><br>
+
+On obtient la droite :
+
+<b>y = 15x + 20</b>
+
+<br><br>
+
+Pour x = 10 :
+
+<br><br>
+
+y = 15×10 + 20
+
+<br><br>
+
+<b>y = 170</b>
+
+<br><br>
+
+La valeur estimée de y est donc <b>170</b>.
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>X. MÉTHODE POUR LE BAC</h2>
+
+<div class="prop">
+
+<b>Étape 1 :</b> Identifier les deux variables x et y.
+
+<br><br>
+
+<b>Étape 2 :</b> Placer les points dans un repère.
+
+<br><br>
+
+<b>Étape 3 :</b> Déterminer le point moyen si nécessaire.
+
+<br><br>
+
+<b>Étape 4 :</b> Construire la droite de Mayer lorsque
+la question le demande.
+
+<br><br>
+
+<b>Étape 5 :</b> Déterminer l'équation de la droite.
+
+<br><br>
+
+<b>Étape 6 :</b> Interpréter la corrélation.
+
+<br><br>
+
+<b>Étape 7 :</b> Utiliser la droite pour effectuer
+une estimation si nécessaire.
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>🧠 À RETENIR POUR LE BAC</h2>
+
+<div class="prop">
+
+<b>Nuage de points :</b> représentation graphique des couples
+(xᵢ ; yᵢ).
+
+<br><br>
+
+<b>Point moyen :</b> G(x̄ ; ȳ).
+
+<br><br>
+
+<b>Droite :</b> y = ax + b.
+
+<br><br>
+
+<b>Coefficient directeur :</b>
+
+a = (y₂-y₁)/(x₂-x₁).
+
+<br><br>
+
+<b>Corrélation :</b>
+
+-1 ≤ r ≤ 1.
+
+<br><br>
+
+<b>r proche de 1 :</b> forte corrélation positive.
+
+<br><br>
+
+<b>r proche de -1 :</b> forte corrélation négative.
+
+<br><br>
+
+<b>r proche de 0 :</b> faible corrélation linéaire.
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<a href="maths-a1-lecon4.html" class="btn">
+← Leçon 4 Suites
+</a>
+
+<a href="maths-a1-lecon6.html" class="btn">
+Leçon 6 → Systèmes
+</a>
+
+<a href="maths-a1.html" class="btn">
+← Retour Programme
+</a>
+
+
+</body>
+</html>

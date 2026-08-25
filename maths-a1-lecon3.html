@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leçon 3 - exp</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#ffffff;color:#000;line-height:1.9;font-size:18px}
+header{background:#ffffff;text-align:center;padding:25px 15px;border-bottom:5px solid #f3a900}
+header h1{color:#111c68;font-size:24px}
+.container{padding:15px;max-width:700px;margin:auto}
+.card{background:#fff;border:2px solid #ddd;padding:20px;border-radius:12px;margin-bottom:20px}
+h2{color:#111c68;background:#fff8e1;padding:8px 12px;border-left:6px solid #f3a900;font-size:20px;margin-bottom:12px;border-radius:4px}
+.def{border-left:5px solid #111c68;background:#eef2ff;padding:14px;border-radius:8px;margin:12px 0}
+.prop{border-left:5px solid #f3a900;background:#fff8e1;padding:14px;border-radius:8px;margin:12px 0}
+.formule{border:2px solid #111c68;background:#fff;padding:14px;border-radius:10px;margin:12px 0;font-weight:bold;text-align:center;font-size:19px}
+.exemple{border-left:5px solid #2e7d32;background:#f1f8e9;padding:14px;border-radius:8px;margin:12px 0}
+.btn{display:block;text-align:center;margin:10px auto;padding:14px 30px;background:#f3a900;color:#000;font-weight:bold;text-decoration:none;border-radius:30px;border:2px solid #000;width:280px}
+</style>
+</head>
+<body>
+<header>
+<h1>LEÇON 3 - TERMINALE A1</h1>
+<p>Fonction Exponentielle exp</p>
+<p><b>6 points au BAC</b></p>
+</header>
+<div class="container">
+
+<div class="card">
+<h2>I. DÉFINITION</h2>
+<div class="def">
+<b>Définition :</b> La fonction exp est définie sur R par f(x) = e^x<br>
+Elle est l'inverse de ln :<br>
+e^(ln x) = x si x>0<br>
+ln(e^x) = x
+</div>
+<div class="formule">
+e^0 = 1<br>
+e^1 = e ≈ 2,718<br>
+e^x > 0 pour tout x
+</div>
+</div>
+
+<div class="card">
+<h2>II. PROPRIÉTÉS (QCM BAC)</h2>
+<div class="formule">
+e^(a+b) = e^a × e^b<br>
+e^(a-b) = e^a / e^b<br>
+e^(-a) = 1 / e^a<br>
+(e^a)^n = e^(a×n)
+</div>
+<div class="prop">
+<b>Exemples :</b><br>
+e^2 × e^3 = e^5<br>
+e^5 / e^2 = e^3<br>
+1 / e^2 = e^-2
+</div>
+</div>
+
+<div class="card">
+<h2>III. DÉRIVÉE ET VARIATIONS</h2>
+<div class="def">
+<b>Dérivée :</b><br>
+(e^x)' = e^x<br>
+(e^u)' = u' × e^u
+</div>
+<div class="prop">
+<b>Variation :</b><br>
+e^x est <b>strictement croissante</b> sur R<br>
+Et e^x > 0 toujours, donc pas de problème de domaine.
+</div>
+<div class="exemple">
+<b>Exercice dérivée :</b><br>
+f(x) = e^(2x+1)<br>
+u = 2x+1 → u' = 2<br>
+f'(x) = 2 × e^(2x+1)<br><br>
+
+f(x) = e^x + x<br>
+f'(x) = e^x + 1 > 0 donc croissante
+</div>
+</div>
+
+<div class="card">
+<h2>IV. ÉQUATIONS ET INÉQUATIONS</h2>
+<div class="exemple">
+<b>Règle :</b><br>
+e^a = e^b ⇔ a = b<br>
+e^a < e^b ⇔ a < b (car croissante)<br><br>
+
+<b>Exemple 1 :</b> e^x = 5 → x = ln 5<br>
+<b>Exemple 2 :</b> e^(2x) = e^3 → 2x=3 → x=3/2<br>
+<b>Exemple 3 BAC :</b> e^x ≤ 1 → e^x ≤ e^0 → x ≤ 0 → S = ]-∞;0]
+</div>
+</div>
+
+<div class="card">
+<h2>V. LIMITES DE exp</h2>
+<div class="formule">
+lim e^x = 0 quand x→-∞<br>
+lim e^x = +∞ quand x→+∞<br>
+lim e^x / x = +∞ quand x→+∞<br>
+lim x×e^x = 0 quand x→-∞
+</div>
+</div>
+
+<div class="card">
+<h2>VI. EXEMPLE COMPLET BAC</h2>
+<div class="exemple">
+<b>f(x) = e^x - x sur R</b><br><br>
+<b>1) Limites :</b><br>
+En -∞ : e^x→0 et -x→+∞ donc f→+∞<br>
+En +∞ : e^x/x → +∞ donc f→+∞<br><br>
+<b>2) Dérivée :</b><br>
+f'(x) = e^x - 1<br>
+f'(x)=0 ⇔ e^x=1 ⇔ x=0<br>
+f'(x)>0 ⇔ e^x>1 ⇔ x>0<br><br>
+<b>3) Tableau :</b><br>
+x | -∞ .... 0 .... +∞<br>
+f'| - - - 0 + + +<br>
+f | +∞ ↘ 1 ↗ +∞<br>
+Minimum en 0 : f(0)=1
+</div>
+</div>
+
+</div>
+
+<a href="maths-a1-lecon2.html" class="btn">← Leçon 2 ln</a>
+<a href="maths-a1-lecon4.html" class="btn">Leçon 4 → Suites</a>
+<a href="maths-a1.html" class="btn">← Retour Programme</a>
+
+</body>
+</html>

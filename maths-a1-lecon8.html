@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Leçon 8 - Dénombrement et Probabilités</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#fff;
+    color:#000;
+    line-height:1.9;
+    font-size:18px
+}
+
+header{
+    background:#fff;
+    text-align:center;
+    padding:25px 15px;
+    border-bottom:5px solid #f3a900
+}
+
+header h1{
+    color:#111c68;
+    font-size:24px
+}
+
+.container{
+    padding:15px;
+    max-width:700px;
+    margin:auto
+}
+
+.card{
+    background:#fff;
+    border:2px solid #ddd;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px
+}
+
+h2{
+    color:#111c68;
+    background:#fff8e1;
+    padding:8px 12px;
+    border-left:6px solid #f3a900;
+    font-size:20px;
+    margin-bottom:12px;
+    border-radius:4px
+}
+
+.def{
+    border-left:5px solid #111c68;
+    background:#eef2ff;
+    padding:14px;
+    border-radius:8px;
+    margin:12px 0
+}
+
+.prop{
+    border-left:5px solid #f3a900;
+    background:#fff8e1;
+    padding:14px;
+    border-radius:8px;
+    margin:12px 0
+}
+
+.formule{
+    border:2px solid #111c68;
+    background:#fff;
+    padding:14px;
+    border-radius:10px;
+    margin:12px 0;
+    font-weight:bold;
+    text-align:center;
+    font-size:19px
+}
+
+.exemple{
+    border-left:5px solid #2e7d32;
+    background:#f1f8e9;
+    padding:14px;
+    border-radius:8px;
+    margin:12px 0
+}
+
+.btn{
+    display:block;
+    text-align:center;
+    margin:10px auto;
+    padding:14px 30px;
+    background:#f3a900;
+    color:#000;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:30px;
+    border:2px solid #000;
+    width:280px
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#68718e;
+    font-size:14px
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>LEÇON 8 - TERMINALE A1</h1>
+
+<p>Dénombrement et Probabilités</p>
+
+<p><b>Mathématiques — Niveau BAC A1</b></p>
+
+</header>
+
+
+<div class="container">
+
+
+<div class="card">
+
+<h2>I. RAPPELS SUR LE DÉNOMBREMENT</h2>
+
+<div class="def">
+
+Le <b>dénombrement</b> permet de déterminer le nombre de possibilités
+dans une situation donnée.
+
+<br><br>
+
+Il est particulièrement utile dans les problèmes de probabilités
+lorsqu'on doit compter les cas possibles et les cas favorables.
+
+</div>
+
+
+<div class="prop">
+
+<b>Principe multiplicatif :</b>
+
+<br><br>
+
+Si une première étape peut être réalisée de <b>n</b> façons et une
+deuxième de <b>p</b> façons, alors les deux étapes peuvent être
+réalisées de :
+
+<br><br>
+
+<b>n × p</b>
+
+<br><br>
+
+façons.
+
+</div>
+
+
+<div class="exemple">
+
+<b>Exemple :</b>
+
+<br><br>
+
+Un élève possède 3 chemises et 4 pantalons.
+
+<br><br>
+
+Nombre de tenues possibles :
+
+<b>3 × 4 = 12</b>
+
+<br><br>
+
+Il peut donc former <b>12 tenues différentes</b>.
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>II. FACTORIELLE</h2>
+
+<div class="def">
+
+Pour tout entier naturel n non nul :
+
+<br><br>
+
+<b>n! = n × (n-1) × (n-2) × ... × 2 × 1</b>
+
+<br><br>
+
+Par convention :
+
+<b>0! = 1</b>
+
+</div>
+
+
+<div class="exemple">
+
+<b>Exemple :</b>
+
+<br><br>
+
+5! = 5 × 4 × 3 × 2 × 1
+
+<br><br>
+
+<b>5! = 120</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>III. ARRANGEMENTS</h2>
+
+<div class="def">
+
+Un <b>arrangement</b> de p éléments parmi n est un choix de p
+éléments distincts parmi n éléments lorsque <b>l'ordre compte</b>.
+
+</div>
+
+
+<div class="formule">
+
+A(n,p) = n! / (n-p)!
+
+</div>
+
+
+<div class="exemple">
+
+<b>Exemple :</b>
+
+<br><br>
+
+On choisit un président et un secrétaire parmi 5 élèves.
+
+<br><br>
+
+L'ordre compte car les deux fonctions sont différentes.
+
+<br><br>
+
+A(5,2) = 5! / 3!
+
+<br><br>
+
+<b>A(5,2) = 20</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>IV. COMBINAISONS</h2>
+
+<div class="def">
+
+Une <b>combinaison</b> de p éléments parmi n est un choix de p
+éléments distincts parmi n éléments lorsque <b>l'ordre ne compte pas</b>.
+
+</div>
+
+
+<div class="formule">
+
+C(n,p) = n! / [p!(n-p)!]
+
+</div>
+
+
+<div class="prop">
+
+<b>Propriétés :</b>
+
+<br><br>
+
+C(n,0) = 1
+
+<br>
+
+C(n,1) = n
+
+<br>
+
+C(n,n) = 1
+
+<br>
+
+C(n,p) = C(n,n-p)
+
+</div>
+
+
+<div class="exemple">
+
+<b>Exemple :</b>
+
+<br><br>
+
+On choisit 2 élèves parmi 8 élèves.
+
+<br><br>
+
+L'ordre ne compte pas.
+
+<br><br>
+
+C(8,2) = 8! / (2! × 6!)
+
+<br><br>
+
+<b>C(8,2) = 28</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>V. EXPÉRIENCE ALÉATOIRE</h2>
+
+<div class="def">
+
+Une <b>expérience aléatoire</b> est une expérience dont le résultat
+ne peut pas être prévu avec certitude avant sa réalisation.
+
+<br><br>
+
+L'ensemble de tous les résultats possibles est appelé
+<b>univers</b> et est noté généralement <b>Ω</b>.
+
+<br><br>
+
+Un <b>événement</b> est un ensemble de résultats de l'univers.
+
+</div>
+
+
+<div class="exemple">
+
+<b>Exemple :</b>
+
+<br><br>
+
+On lance un dé équilibré à six faces.
+
+<br><br>
+
+L'univers est :
+
+<b>Ω = {1 ; 2 ; 3 ; 4 ; 5 ; 6}</b>
+
+<br><br>
+
+L'événement A :
+« obtenir un nombre pair »
+
+est :
+
+<b>A = {2 ; 4 ; 6}</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>VI. PROBABILITÉ D'UN ÉVÉNEMENT</h2>
+
+<div class="def">
+
+La probabilité d'un événement A est un nombre compris entre 0 et 1.
+
+</div>
+
+
+<div class="formule">
+
+0 ≤ P(A) ≤ 1
+
+</div>
+
+
+<div class="prop">
+
+Lorsque les issues sont équiprobables :
+
+<br><br>
+
+<b>
+P(A) =
+Nombre de cas favorables
+/
+Nombre de cas possibles
+</b>
+
+</div>
+
+
+<div class="exemple">
+
+<b>Exemple :</b>
+
+<br><br>
+
+On lance un dé équilibré.
+
+<br><br>
+
+Événement A :
+« obtenir un nombre pair ».
+
+<br><br>
+
+Il y a 3 résultats favorables sur 6 résultats possibles.
+
+<br><br>
+
+<b>P(A) = 3/6 = 1/2</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>VII. ÉVÉNEMENT CONTRAIRE</h2>
+
+<div class="def">
+
+L'événement contraire de A, noté <b>Ā</b>, est l'événement
+qui se réalise lorsque A ne se réalise pas.
+
+</div>
+
+
+<div class="formule">
+
+P(Ā) = 1 - P(A)
+
+</div>
+
+
+<div class="exemple">
+
+<b>Exemple :</b>
+
+<br><br>
+
+Si :
+
+P(A) = 0,3
+
+<br><br>
+
+Alors :
+
+P(Ā) = 1 - 0,3
+
+<br><br>
+
+<b>P(Ā) = 0,7</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>VIII. UNION ET INTERSECTION</h2>
+
+<div class="def">
+
+L'événement <b>A ∩ B</b> signifie que A et B se réalisent
+simultanément.
+
+<br><br>
+
+L'événement <b>A ∪ B</b> signifie que A ou B se réalise.
+
+</div>
+
+
+<div class="formule">
+
+P(A ∪ B) = P(A) + P(B) - P(A ∩ B)
+
+</div>
+
+
+<div class="prop">
+
+Si A et B sont <b>incompatibles</b>, alors :
+
+<br><br>
+
+<b>P(A ∩ B) = 0</b>
+
+<br><br>
+
+et donc :
+
+<br><br>
+
+<b>P(A ∪ B) = P(A) + P(B)</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>IX. TIRAGE DE BOULES</h2>
+
+<div class="exemple">
+
+Un sac contient <b>5 boules rouges</b> et <b>3 boules noires</b>.
+
+<br><br>
+
+On tire simultanément 2 boules.
+
+<br><br>
+
+Nombre total de tirages :
+
+<br><br>
+
+<b>C(8,2) = 28</b>
+
+<br><br>
+
+Probabilité d'obtenir 2 boules rouges :
+
+<br><br>
+
+<b>
+P = C(5,2) / C(8,2)
+</b>
+
+<br><br>
+
+<b>
+P = 10/28 = 5/14
+</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>X. « AU MOINS UN »</h2>
+
+<div class="prop">
+
+Pour calculer la probabilité d'obtenir <b>au moins un</b> élément,
+on peut utiliser l'événement contraire :
+
+<br><br>
+
+<b>
+P(au moins un) = 1 - P(aucun)
+</b>
+
+</div>
+
+
+<div class="exemple">
+
+Dans le sac précédent :
+
+<br><br>
+
+P(au moins une boule rouge)
+
+<br><br>
+
+= 1 - P(aucune boule rouge)
+
+<br><br>
+
+= 1 - C(3,2) / C(8,2)
+
+<br><br>
+
+= 1 - 3/28
+
+<br><br>
+
+<b>= 25/28</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>XI. MÉTHODE POUR LE BAC</h2>
+
+<div class="prop">
+
+<b>Étape 1 :</b> Identifier l'expérience aléatoire.
+
+<br><br>
+
+<b>Étape 2 :</b> Déterminer les résultats possibles.
+
+<br><br>
+
+<b>Étape 3 :</b> Déterminer les cas favorables.
+
+<br><br>
+
+<b>Étape 4 :</b> Choisir la formule adaptée.
+
+<br><br>
+
+<b>Étape 5 :</b> Effectuer le calcul et simplifier le résultat.
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>🧠 À RETENIR POUR LE BAC</h2>
+
+<div class="prop">
+
+<b>Arrangement :</b> l'ordre compte.
+
+<br><br>
+
+<b>Combinaison :</b> l'ordre ne compte pas.
+
+<br><br>
+
+<b>Probabilité :</b>
+
+P(A) = cas favorables / cas possibles.
+
+<br><br>
+
+<b>Événement contraire :</b>
+
+P(Ā) = 1 - P(A).
+
+<br><br>
+
+<b>Union :</b>
+
+P(A ∪ B) = P(A) + P(B) - P(A ∩ B).
+
+<br><br>
+
+<b>Au moins un :</b>
+
+P(au moins un) = 1 - P(aucun).
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>🎓 FIN DU PROGRAMME</h2>
+
+<div class="prop">
+
+<b>Félicitations !</b> 🎉
+
+<br><br>
+
+Tu viens de terminer le programme de mathématiques
+de <b>Terminale A1</b> sur la plateforme <b>Les Leaders</b>.
+
+<br><br>
+
+Mais terminer le programme ne signifie pas arrêter de travailler.
+C'est maintenant que commence la phase de révision et
+d'entraînement.
+
+</div>
+
+
+<div class="exemple">
+
+<b>💡 Petit conseil pour réussir son BAC en mathématiques :</b>
+
+<br><br>
+
+📚 <b>Apprends les notions essentielles</b> et comprends les
+formules au lieu de les mémoriser sans comprendre.
+
+<br><br>
+
+✍️ <b>Entraîne-toi régulièrement</b> avec différents types
+d'exercices.
+
+<br><br>
+
+📝 <b>Travaille les anciens sujets de BAC</b> pour apprendre
+à reconnaître les méthodes.
+
+<br><br>
+
+🔎 <b>Corrige tes erreurs</b> et cherche à comprendre
+pourquoi tu t'es trompé.
+
+<br><br>
+
+⏱️ <b>En composition, gère bien ton temps.</b>
+Lis tout le sujet avant de commencer et commence par les
+questions que tu maîtrises.
+
+<br><br>
+
+🧠 <b>Sois méthodique :</b> écris les formules, détaille tes
+calculs et justifie tes réponses.
+
+<br><br>
+
+🔥 <b>La régularité, la compréhension et l'entraînement
+sont tes meilleurs alliés.</b>
+
+<br><br>
+
+<b>Ne cherche pas seulement à mémoriser :
+cherche à comprendre.</b>
+
+</div>
+
+
+<div class="formule">
+
+🎯 OBJECTIF : COMPRENDRE • S'ENTRAÎNER • RÉUSSIR
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<a href="maths-a1-lecon7.html" class="btn">
+← Leçon 7 Primitives
+</a>
+
+
+<a href="maths-a1.html" class="btn">
+← Retour Programme
+</a>
+
+
+<footer>
+
+© 2026 Les Leaders
+
+<br><br>
+
+INSPIRER • FORMER • TRANSFORMER
+
+</footer>
+
+
+</body>
+</html>
